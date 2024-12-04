@@ -18,8 +18,8 @@ public class Question1 {    // Interfaces
         shape.add(new Pyramid(6, 4, 30));
 
         // Calculate total weight and rectangular volume
-        System.out.println("Total Weight: " + shape.totalWeight());
-        System.out.println("Total Rectangular Volume: " + shape.totalRectangularVolume());
+        System.out.println("Total Weight: " + shape.totalWeight() +"kg");
+        System.out.println("Total Rectangular Volume: " + shape.totalRectangularVolume() +"cm³");
 
         // Display all containers
         List<IMeasurableContainer> containers = shape.getAllContainers();

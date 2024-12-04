@@ -1,10 +1,10 @@
 package org.example.Q1;
 
 public class Box implements IMeasurableContainer {
-    private double length;
-    private double width;
-    private double depth;
-    private double weight;
+    private double length;  // Length of the box
+    private double width;   // Width of the box
+    private double depth;   // Depth (height) of the box
+    private double weight;  // Weight of the box
 
     public Box(double width, double length, double depth, double weight) {
         this.width = width;
@@ -17,7 +17,7 @@ public class Box implements IMeasurableContainer {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
@@ -47,7 +47,7 @@ public class Box implements IMeasurableContainer {
 
     @Override
     public String toString() {
-        return "box{" +
+        return "Box{" +
                 "length=" + length +
                 ", width=" + width +
                 ", depth=" + depth +
@@ -57,12 +57,13 @@ public class Box implements IMeasurableContainer {
 
     @Override
     public double weight() {
-        return 0;
+        // Simply return the weight of the box
+        return this.weight;
     }
 
     @Override
     public double rectangularVolume() {
-        return 0;
+        // Volume of a rectangular box: length × width × depth
+        return length * width * depth;
     }
 }
-

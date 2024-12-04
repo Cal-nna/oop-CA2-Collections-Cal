@@ -1,9 +1,9 @@
 package org.example.Q1;
 
-public class Pyramid implements IMeasurableContainer{
-    private double length;
-    private double sideLength;
-    private double weight;
+public class Pyramid implements IMeasurableContainer {
+    private double length;      // Base length of the pyramid
+    private double sideLength; // Height or side slant length
+    private double weight;      // Weight of the pyramid
 
     public Pyramid(double length, double sideLength, double weight) {
         this.length = length;
@@ -46,12 +46,16 @@ public class Pyramid implements IMeasurableContainer{
 
     @Override
     public double weight() {
-        return 0;
+        // Simply return the weight of the pyramid
+        return this.weight;
     }
 
     @Override
     public double rectangularVolume() {
-        return 0;
+        // Calculate the rectangular volume of a pyramid:
+        // Volume = (1/3) * Base Area * Height
+        // Assuming "length" is the base length and "sideLength" is the height
+        double baseArea = length * length;
+        return (1.0 / 3) * baseArea * sideLength;
     }
 }
-

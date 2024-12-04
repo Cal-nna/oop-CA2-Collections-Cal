@@ -1,4 +1,5 @@
 package org.example.Q1;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,11 +15,19 @@ public class ContainerManager {
     }
 
     public double totalWeight() {
-        return containers.stream().mapToDouble(IMeasurableContainer::weight).sum();
+        double total = 0.0;
+        for (IMeasurableContainer container : containers) {
+            total += container.weight();
+        }
+        return total;
     }
 
     public double totalRectangularVolume() {
-        return containers.stream().mapToDouble(IMeasurableContainer::rectangularVolume).sum();
+        double total = 0.0;
+        for (IMeasurableContainer container : containers) {
+            total += container.rectangularVolume();
+        }
+        return total;
     }
 
     public void clearAll() {
@@ -29,5 +38,3 @@ public class ContainerManager {
         return new ArrayList<>(containers);
     }
 }
-
-
