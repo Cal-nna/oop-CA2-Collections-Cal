@@ -26,7 +26,7 @@ public class Question8 { // Shares Tax Calculations (Queue for Multiple Companie
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        // Map to hold queues for symbols
+        // Map to hold queue for symbols
         Map<String, Queue<Block>> stockMap = new HashMap<>();
         String command;
 
