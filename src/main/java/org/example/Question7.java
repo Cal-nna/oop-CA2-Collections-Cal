@@ -4,8 +4,8 @@ import java.util.Queue;
 import java.util.Scanner;
 
 /**
- *  Name:
- *  Class Group:
+ *  Name: Callum Hanna
+ *  Class Group: SD2A
  */
 public class Question7 { // Shares Tax Calculations (Queue)
 
@@ -42,7 +42,7 @@ public class Question7 { // Shares Tax Calculations (Queue)
                 int qty = in.nextInt();
                 double price = in.nextDouble();
                 queue.add(new Block(qty, price)); // Add a new block to the queue
-                System.out.println("Bought " + qty + " shares at $" + price + " per share.");
+                System.out.println("Bought " + qty + " shares at €" + price + " per share.");
             } else if (command.equalsIgnoreCase("sell")) {
                 // Sell
                 int qtyToSell = in.nextInt();
@@ -68,7 +68,7 @@ public class Question7 { // Shares Tax Calculations (Queue)
                 if (qtyToSell > 0) {
                     System.out.println("Not enough shares to sell!");
                 }
-                System.out.printf("Sold shares. Total gain: $%.2f%n", totalGain);
+                System.out.printf("Sold shares. Total gain: €%.2f%n", totalGain);
             } else if (!command.equalsIgnoreCase("quit")) {
                 // invalid command check
                 System.out.println("Invalid command. Use 'buy', 'sell', or 'quit'.");

@@ -2,8 +2,8 @@ package org.example.Q1;
 import java.util.List;
 
 /**
- *  Your Name:
- *  Class Group:
+ *  Your Name: Callum Hanna
+ *  Class Group: SD2A
  */
 public class Question1 {    // Interfaces
     public static void main(String[] args) {
