@@ -26,7 +26,7 @@ public class Question11 {
 
     public static void main(String[] args) throws FileNotFoundException {
         // Define the filename for the input data
-        String file = "src/main/java/org/example/CitiesDistances.txt";
+        String file = "CitiesDistances.txt";
 
         //It Reads the input file and store the lines in a list
         List<String> lines = readFile(file);
