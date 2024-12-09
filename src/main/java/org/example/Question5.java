@@ -49,6 +49,6 @@ public class Question5 {    //Java Identifier Count (Map)
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        readFile("C:\\Users\\AGBro\\IdeaProjects\\oop-CA2-Collections-STARTER-Nov24\\src\\main\\java\\org\\example\\Question2.java");
+        readFile("src/main/java/org/example/Question2.java");
     }
 }
