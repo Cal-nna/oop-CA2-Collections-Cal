@@ -1,12 +1,16 @@
 package org.example;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
- *  Name:
- *  Class Group:
+ *  Name: Alex Broccadinho
+ *  Class Group: SD2A
  */
 public class Question5 {    //Java Identifier Count (Map)
 

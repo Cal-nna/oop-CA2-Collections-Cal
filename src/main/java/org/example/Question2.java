@@ -5,8 +5,8 @@ import java.util.Deque;
 import java.util.Scanner;
 
 /**
- * Name:
- * Class Group:
+ * Name: Alexander Broccardinho
+ * Class Group: SD2A
  */
 public class Question2  // Car Parking - Stack
 {

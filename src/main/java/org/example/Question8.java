@@ -7,8 +7,8 @@ import java.util.Queue;
 import java.util.Scanner;
 
 /**
- *  Name:
- *  Class Group:
+ *  Name: Callum Hanna
+ *  Class Group: SD2A
  */
 public class Question8 { // Shares Tax Calculations (Queue for Multiple Companies)
 

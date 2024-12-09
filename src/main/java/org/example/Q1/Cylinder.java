@@ -1,9 +1,9 @@
 package org.example.Q1;
 
 public class Cylinder implements IMeasurableContainer {
-    private double height;      // Height of the cylinder
-    private double weight;      // Weight of the cylinder
-    private double diameter;    // Diameter of the base of the cylinder
+    private double height;
+    private double weight;
+    private double diameter;
 
     public Cylinder(double height, double weight, double diameter) {
         this.height = height;

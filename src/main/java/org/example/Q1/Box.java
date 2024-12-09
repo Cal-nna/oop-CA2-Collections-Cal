@@ -1,10 +1,10 @@
 package org.example.Q1;
 
 public class Box implements IMeasurableContainer {
-    private double length;  // Length of the box
-    private double width;   // Width of the box
-    private double depth;   // Depth (height) of the box
-    private double weight;  // Weight of the box
+    private double length;
+    private double width;
+    private double depth;
+    private double weight;
 
     public Box(double width, double length, double depth, double weight) {
         this.width = width;

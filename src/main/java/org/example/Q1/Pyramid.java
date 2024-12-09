@@ -1,9 +1,9 @@
 package org.example.Q1;
 
 public class Pyramid implements IMeasurableContainer {
-    private double length;      // Base length of the pyramid
-    private double sideLength; // Height or side slant length
-    private double weight;      // Weight of the pyramid
+    private double length;
+    private double sideLength;
+    private double weight;
 
     public Pyramid(double length, double sideLength, double weight) {
         this.length = length;

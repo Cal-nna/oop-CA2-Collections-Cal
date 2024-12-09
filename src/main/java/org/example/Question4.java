@@ -1,11 +1,11 @@
 package org.example;
 
-import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
- *  Name:
- *  Class Group:
+ *  Name: Alex Broccadinho
+ *  Class Group: SD2A
  */
 
 public class Question4  // Flood Fill (Stack, 2D Array)
@@ -16,6 +16,37 @@ public class Question4  // Flood Fill (Stack, 2D Array)
     public static void start()
     {
         int[][] arr = floodFillStart();
+
+        arr[0][3] = -1;
+        arr[1][3] = -1;
+        arr[2][5] = -1;
+        arr[4][7] = -1;
+        arr[4][8] = -1;
+        arr[5][3] = -1;
+        arr[2][9] = -1;
+        arr[7][3] = -1;
+        arr[6][0] = -1;
+        arr[4][4] = -1;
+        arr[9][1] = -1;
+
+        System.out.println("Matrix before flood fill: ");
+        display(arr);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the starting Row (0-9): ");
+        int StartRow = sc.nextInt();
+        System.out.println("Enter the starting Column (0-9): ");
+        int StartColumn = sc.nextInt();
+
+        if(StartRow < 0 || StartRow >= arr.length || StartColumn < 0 || StartColumn >= arr[0].length || arr[StartRow][StartColumn] == -1){
+            System.out.println("Invalid Starting Position");
+            return;
+        }
+
+        fill(StartRow, StartColumn, arr);
+
+        System.out.println("Matrix after flood fill: ");
+        display(arr);
     }
 
     /*
@@ -49,7 +80,39 @@ public class Question4  // Flood Fill (Stack, 2D Array)
     }
     private static void fill(int r, int c, int[][] arr)
     {
+        Stack<Cell> stack = new Stack<>();
+        stack.push(new Cell(r,c));
 
+        int fillValue = 1;
+
+        while(!stack.isEmpty()){
+            Cell cell = stack.pop();
+            int row = cell.row;
+            int col = cell.col;
+
+            if(row < 0 || row >= arr.length || col < 0 || col >= arr[row].length){
+                continue;
+            }
+
+            if(arr[row][col] == 0) {
+                arr[row][col] = fillValue++;
+                System.out.println("Filling row " + row + " col " + col);
+
+
+                stack.push(new Cell(row - 1, col));//North
+                stack.push(new Cell(row + 1, col));//South
+                stack.push(new Cell(row, col + 1));//East
+                stack.push(new Cell(row, col - 1));//West
+            }
+        }
+    }
+    static class Cell{
+        int row, col;
+
+        Cell(int row, int col){
+            this.row = row;
+            this.col = col;
+        }
     }
 
 }
